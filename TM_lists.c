@@ -70,7 +70,7 @@ list_t *add_node_end(list_t **head, const char *str, int num)
 			node = node->next;
 		node->next = new_node;
 	}
-	else	
+	else
 		*head = new_node;
 	return (new_node);
 }
@@ -124,8 +124,9 @@ int delete_node_at_index(list_t **head, unsigned int index)
 		if (i == index)
 		{
 			prev_node->next = node->next;
-			free(node->str);			free(node);
-					
+			free(node->str);
+			free(node);
+
 			return (1);
 		}
 		i++;
