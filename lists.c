@@ -45,7 +45,6 @@ list_t *add_node_end(list_t **head, const char *str, int num)
 {
 	list_t *new_node, *node;
 
-
 	if (!head)
 		return (NULL);
 
@@ -126,7 +125,6 @@ int delete_node_at_index(list_t **head, unsigned int index)
 			prev_node->next = node->next;
 			free(node->str);
 			free(node);
-
 			return (1);
 		}
 		i++;
@@ -146,9 +144,7 @@ void free_list(list_t **head_ptr)
 {
 	list_t *node, *next_node, *head;
 
-
 	if (!head_ptr || !*head_ptr)
-
 		return;
 	head = *head_ptr;
 	node = head;
